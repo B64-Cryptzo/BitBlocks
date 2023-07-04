@@ -27,6 +27,8 @@ Compatible with both x86 and x64 due to the use of generic types. Doesn't requir
 By using a single char as opposed to individual booleans, larger projects that require the use of multiple booleans can pack them in a single byte which can reduce both file size
 and improve performance via optimized caching. The boolean equivalent of 1 BitBlock (1 Byte) is 8 Booleans (8 Bytes)
 
+It is worth mentioning that std::bitset can be used to accomplish the same thing however, it require a minimum of 4 bytes. Additionally, grouping booleans according to their catagory isn't possible when using a bitset without sacrificing size.
+
 ## Technical Explanation
 Bytes in memory are interpreted by computers as eight 1s or 0s. This allows any individual byte a max value of 256. However a boolean can only take 2 values (1 and 0). 
 But because modern CPUs can't address anything smaller than a byte, developers represent a boolean with a full byte. This means that the 7 other bits in any boolean are wasted 
