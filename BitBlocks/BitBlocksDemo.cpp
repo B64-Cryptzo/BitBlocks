@@ -1,11 +1,13 @@
 #include "BitPacker.h"
 #include <iostream>
 
+
 int main()
 {
 	BitBlock DemoApi(likesBread | likesButter | likesHam | likesTomato | likesLettuce | likesOlives);
 
 	DemoApi.toggleBit(likesOlives);
+
 
 	std::cout << (DemoApi(likesOlives) ? "true" : "false") << "\n";
 	
