@@ -5,6 +5,7 @@
  
 ## Usage
  ![banner](img/image.png)
+
 Include the header in your project and simply create a new class with your desired enums as the parameter. The demo shows how you can create an enum of unsigned chars to represent the boolean name.
 
 ```cpp
